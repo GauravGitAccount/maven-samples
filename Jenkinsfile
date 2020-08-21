@@ -23,7 +23,7 @@ pipeline {
             )
            }
         }  
-        stage('Build') {
+        /*stage('Build') {
             steps {
                 script {
                     echo sh(script:'env|sort',returnStdout:true)
@@ -31,7 +31,7 @@ pipeline {
                 }
                 
             }
-
+*/
             //post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
