@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                //git credentialsId: '4fbc3666-dac6-48ff-aec5-310096b93f6f', url: 'https://github.com/GauravGitAccount/maven-samples.git'
-                //checkout scm
+                git credentialsId: '4fbc3666-dac6-48ff-aec5-310096b93f6f', url: 'https://github.com/GauravGitAccount/maven-samples.git'
+                checkout scm
             }
         }
         stage('Git Checkout') { 
