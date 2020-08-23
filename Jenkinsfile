@@ -4,7 +4,9 @@ pipeline {
     }
     stages {
         stage('checkout') {
-            sh "git version"   
+            script {
+                sh "git version"
+            }
         }
         stage('Build') {
             steps {
