@@ -1,8 +1,11 @@
 pipeline {
     agent {
-        label 'docker'
+        label 'git'
     }
     stages {
+        stage('checkout') {
+            sh "git version"   
+        }
         stage('Build') {
             steps {
                 script {
