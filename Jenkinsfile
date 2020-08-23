@@ -4,8 +4,10 @@ pipeline {
     }
     stages {
         stage('checkout') {
-            script {
-                sh "git version"
+            steps {
+                script {
+                    sh "git version"
+                }
             }
         }
         stage('Build') {
