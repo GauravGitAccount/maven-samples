@@ -3,13 +3,6 @@ pipeline {
         label 'docker'
     }
     stages {
-        stage('checkout') {
-            steps {
-                script {
-                    sh "git version"
-                }
-            }
-        }
         stage('Build') {
             steps {
                 script {
