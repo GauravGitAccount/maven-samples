@@ -11,8 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    //sh "git clone https://github.com/GauravGitAccount/maven-samples"
-                    checkout scm
+                    sh "git clone https://github.com/GauravGitAccount/maven-samples"
                     dir('maven-samples') {
                         //echo sh(script:'env|sort',returnStdout:true)
                         sh "mvn clean package" 
