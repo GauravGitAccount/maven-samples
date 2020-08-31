@@ -2,6 +2,11 @@ pipeline {
     agent {
         label 'docker'
     }
+    
+    options { 
+        skipDefaultCheckout() 
+    }
+    
     stages {
         stage('Build') {
             steps {
