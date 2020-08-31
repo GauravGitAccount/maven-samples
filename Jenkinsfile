@@ -11,10 +11,12 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh "git clone https://github.com/GauravGitAccount/maven-samples"
-                    sh "cd ./maven-samples"
-                    //echo sh(script:'env|sort',returnStdout:true)
-                    sh "mvn clean package"    
+                    //sh "git clone https://github.com/GauravGitAccount/maven-samples"
+                    checkout scm
+                    dir('maven-samples') {
+                        //echo sh(script:'env|sort',returnStdout:true)
+                        sh "mvn clean package" 
+                    }
                 }
                 
             }
